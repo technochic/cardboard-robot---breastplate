@@ -18,6 +18,20 @@ loops.everyInterval(randint(1000, 4000), function () {
     basic.pause(100)
     pins.digitalWritePin(DigitalPin.P12, 0)
 })
+loops.everyInterval(10000, function () {
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    basic.pause(50)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    basic.pause(50)
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    basic.pause(50)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    basic.pause(50)
+    pins.digitalWritePin(DigitalPin.P12, 1)
+    basic.pause(50)
+    pins.digitalWritePin(DigitalPin.P12, 0)
+    basic.pause(50)
+})
 basic.forever(function () {
     while (true) {
         strip.showColor(neopixel.rgb(25, 0, 5))
